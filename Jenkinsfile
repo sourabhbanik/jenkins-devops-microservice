@@ -37,7 +37,7 @@ pipeline {
 			echo 'I run when you fail'
 		}
 		changed {
-			echo 'I run when build status chnages'
+			echo 'I run when build status changes'
 		}
 	}
 }
