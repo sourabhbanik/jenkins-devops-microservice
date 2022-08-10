@@ -53,7 +53,7 @@ pipeline {
 				sh "mvn package -DskipTests"
 			}
 		}
-		
+
 		stage ('Build Docker Image') {
 			steps {
 				script {
@@ -65,7 +65,7 @@ pipeline {
 		stage ('Push Docker Image') {
 			steps {
 				script {
-					docker.withRegistry(''.'dockerhub') {
+					docker.withRegistry('','dockerhub') {
 						dockerImage.push();
 						dockerImage.push('latest');
 					}
